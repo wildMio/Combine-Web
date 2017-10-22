@@ -49,7 +49,7 @@ body {
 }
 
 /* Style inputs, select elements and textareas */
-.logtxt {
+.logregtxt {
   width: 100%;
   padding: 6px;
   border: 1px solid #ccc;
@@ -60,7 +60,7 @@ body {
 }
 
 /* Style the label to display next to the inputs */
-label {
+form label {
   padding: 6px;
   display: inline-block;
   font-size: 20px;
@@ -92,6 +92,15 @@ label {
   margin-top: 6px;
 }
 
+.js-error {
+  background-color: #EB3D3D;
+  color: #fff;
+  margin:0 30%;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 8px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -113,6 +122,13 @@ label {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     -webkit-animation: fadeEffect 0.5s;
     animation: fadeEffect 0.5s;
+}
+
+ul li {
+  text-align: left;
+}
+ul li:not(:first-child) {
+  margin-top: 6px;
 }
 
 @-webkit-keyframes fadeEffect {
@@ -348,7 +364,7 @@ label {
 
 #dragdiv {
     position: fixed;
-    z-index: 6;
+    z-index: 2;
     text-align: center;
     left: 5px;
 }
@@ -356,7 +372,7 @@ label {
 #dragtab {
   margin: 0;
   padding: 0;
-  z-index: 7;
+  z-index: 2;
 }
 
 #dragdivheader {
@@ -427,6 +443,10 @@ label {
   .col-25, .col-75, .logbtn {
     width: 100%;
     margin-top: 0;
+  }
+
+  .js-error {
+    margin: 8px 0 0 0;
   }
 
   .topnav .navitem{

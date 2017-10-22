@@ -77,7 +77,7 @@ window.onclick = function(event) {
     }
 }
 
-function openCity(evt, logorsig) {
+function openMember(evt, logorreg) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -94,16 +94,14 @@ function openCity(evt, logorsig) {
     }
 
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(logorsig).style.display = "block";
+    document.getElementById(logorreg).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
 //Make the DIV element draggagle:
 dragElement(document.getElementById(("dragdiv")));
 
-$(function() {
-    $('#dragdiv').draggable();
-});
+
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -148,7 +146,6 @@ $(document).ready(function(){
     $('.active').click(function(){
         // toggle type: toggle(), fadeToggle(), slideToggle()
         $('input[name="search"]').toggle(500, function(){
-            console.log('toggle trigger');
         });
         $('input[name="search"]').focus();
     });
@@ -170,5 +167,119 @@ $(document).ready(function(){
     $('#aboutbtn').click(function() {
         checksize();
         $('footer').slideToggle(600);
+    });
+
+    $(function() {
+        $('#dragdiv').draggable();
+    });
+
+    $(document)
+    .on("submit", "form.js-reg", function(event) {
+        event.preventDefault();
+
+        var _form = $(this);
+        var _error = $(".js-error", _form);
+
+        var dataObj = {
+            email: $("input[type='email']", _form).val(),
+            password: $("input[type='password']", _form).val()
+        };
+
+        if(dataObj.email.length <6) {
+            _error
+                .text("請輸入有效的Email")
+                .show();
+            return false;
+        } else if(dataObj.password.length <8) {
+            _error
+                .text("密碼至少8個字")
+                .show();
+            return false;
+        }
+
+        //Assuming the code gets this far, we can start the ajax process
+        _error.hide();
+
+        $.ajax({
+            method: 'POST',
+            url: '/web/full_web/Combine-Web/ajax/register.php',
+            data: dataObj,
+            dataType: 'json',
+            async: true,
+        })
+        .done(function ajaxDone(data) {
+            //whatever data is
+            if(data.redirect !== undefined) {
+                window.location = data.redirect;
+            } else if(data.error !== undefined) {
+                _error
+                    .text(data.error)
+                    .show();
+            }
+        })
+        .fail(function ajaxFailed(e) {
+            //This failed
+            console.log(e);
+        })
+        .always(function ajaxAlwaysDoThis(data) {
+            //Always do
+        });
+
+        return false;
+    });
+
+    $(document)
+    .on("submit", "form.js-login", function(event) {
+        event.preventDefault();
+
+        var _form = $(this);
+        var _error = $(".js-error", _form);
+
+        var dataObj = {
+            email: $("input[type='email']", _form).val(),
+            password: $("input[type='password']", _form).val()
+        };
+
+        if(dataObj.email.length <6) {
+            _error
+                .text("請輸入有效的Email")
+                .show();
+            return false;
+        } else if(dataObj.password.length <8) {
+            _error
+                .text("密碼至少8個字")
+                .show();
+            return false;
+        }
+
+        //Assuming the code gets this far, we can start the ajax process
+        _error.hide();
+
+        $.ajax({
+            method: 'POST',
+            url: '/web/full_web/Combine-Web/ajax/login.php',
+            data: dataObj,
+            dataType: 'json',
+            async: true,
+        })
+        .done(function ajaxDone(data) {
+            //whatever data is
+            if(data.redirect !== undefined) {
+                 window.location = data.redirect;
+            } else if(data.error !== undefined) {
+                _error
+                    .html(data.error)
+                    .show();
+            }
+        })
+        .fail(function ajaxFailed(e) {
+            //This failed
+            console.log(e);
+        })
+        .always(function ajaxAlwaysDoThis(data) {
+            //Always do
+        });
+
+        return false;
     });
 });

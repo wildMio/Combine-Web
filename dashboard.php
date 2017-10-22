@@ -4,8 +4,6 @@
 	define('__CONFIG__', true);
 	//Require the config
 	require_once "inc/config.php";
-
-	Page::ForceDashboard();
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +36,7 @@
 			</div>
 
 			<div id="logIn" class="tabcontent">
-				<form class="js-login" method="POST">
+				<form class="js-login">
 				    <div class="row">
 				      <div class="col-25">
 				        <label for="fname">Email</label>
@@ -63,7 +61,7 @@
 			</div>
 
 			<div id="reg" class="tabcontent">
-				<form class="js-reg" method="POST">
+				<form class="js-reg">
 				    <div class="row">
 				      <div class="col-25">
 				        <label for="fname">Email</label>
@@ -109,7 +107,8 @@
 	  <a href="javascript:void(0);" class="navitem">活動訊息</a>
 	  <a href="javascript:void(0);" class="navitem">商品</a>
 	  <a href="javascript:void(0);" class="navitem" id="aboutbtn">關於我們</a>
-	  <a href="javascript:void(0);" class="navitem" id="membtn">會員</a>
+	  <a href="javascript:void(0);" style="display: none;" id="membtn"></a>
+	  <a href="logout.php" class="navitem">登出</a>
 	  <a href="javascript:void(0);" class="icon navitem" onclick="checksize()">&#9776;</a>
 	</div>
 	<div class="navblank"></div>
