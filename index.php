@@ -80,6 +80,14 @@
 				        <input class="logregtxt" type="password" id="lname" name="lastname" placeholder="password" required="required">
 				      </div>
 				    </div>
+				    <div class="row">
+				      <div class="col-25">
+				        <label for="nickname">暱稱</label>
+				      </div>
+				      <div class="col-75">
+				        <input class="logregtxt" type="text" id="nickname" name="nickname" placeholder="nickname">
+				      </div>
+				    </div>
 				    <div class="row js-error" style="display: none;"></div>
 				    <div class="row">
 				      <button class="logbtn" type="submit">註冊</button>

@@ -4,6 +4,11 @@
 	define('__CONFIG__', true);
 	//Require the config
 	require_once "inc/config.php";
+
+	Page::ForceLogin();
+
+	$User = new User($_SESSION['user_id']);
+
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +108,7 @@
 
 	<!-- navigator -->
 	<div class="topnav" id="myTopnav">
-	  <a href="javascript:void(0);" class="navitem">wildmio</a>
+	  <a href="javascript:void(0);" class="navitem"><?php echo ($User->nickname!="")?$User->nickname:"wildmio"; ?></a>
 	  <a href="javascript:void(0);" class="navitem">活動訊息</a>
 	  <a href="javascript:void(0);" class="navitem">商品</a>
 	  <a href="javascript:void(0);" class="navitem" id="aboutbtn">關於我們</a>

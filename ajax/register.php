@@ -26,9 +26,10 @@
 
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-			$addUser = $con->prepare("INSERT INTO users(email, password) VALUES(LOWER(:email), :password)");
+			$addUser = $con->prepare("INSERT INTO users(email, password, nickname) VALUES(LOWER(:email), :password, :nickname)");
 			$addUser->bindParam(':email', $email, PDO::PARAM_STR);
 			$addUser->bindParam(':password', $password, PDO::PARAM_STR);
+			$addUser->bindParam(':nickname', $_POST['nickname'], PDO::PARAM_STR);
 			$addUser->execute();
 
 			$user_id = $con->lastInsertId();

@@ -10,13 +10,14 @@ class User {
 	public $user_id;
 	public $email;
 	public $reg_time;
+	public $nickname;
 
 	public function __construct($user_id) {
 		$this->con = DB::getConnection();
 
 		$user_id = Filter::Int( $user_id );
 
-		$user = $this->con->prepare("SELECT user_id,email,reg_time From users WHERE user_id = :user_id LIMIT 1");
+		$user = $this->con->prepare("SELECT user_id,email,reg_time,nickname From users WHERE user_id = :user_id LIMIT 1");
 		$user->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 		$user->execute();
 
@@ -26,6 +27,7 @@ class User {
 			$this->email 		= (string) $user->email;
 			$this->user_id 		= (int) $user->user_id;
 			$this->reg_time 	= (string) $user->reg_time;
+			$this->nickname 	= (string) $user->nickname;
 		} else {
 			// No user.
 			//Redirect to  logout.
