@@ -1,0 +1,50 @@
+<div class="food-area">
+	<table>
+		<caption>套餐</caption>
+		<tr>
+			<td colspan="4" class="item-name">111</td>
+			<td colspan="1" class="item-price">$499</td>
+		</tr>
+		<tr>
+			<td colspan="4" class="item-name">222</td>
+			<td colspan="1" class="item-price">$299</td>
+		</tr>
+	</table>
+</div>
+<div class="food-area">
+	<table>
+		<caption>單點</caption>
+		<tr>
+			<td colspan="4" class="item-name">菲力牛排</td>
+			<td colspan="1" class="item-price">$399</td>
+		</tr>
+		<tr>
+			<td colspan="4" class="item-name">醬燒雞腿</td>
+			<td colspan="1" class="item-price">$199</td>
+		</tr>
+	</table>
+</div><div class="food-area">
+	<table>
+		<caption>甜點</caption>
+		<tr>
+			<td colspan="4" class="item-name">乳酪蛋糕</td>
+			<td colspan="1" class="item-price">$100</td>
+		</tr>
+		<tr>
+			<td colspan="4" class="item-name">巧克力聖代</td>
+			<td colspan="1" class="item-price">$100</td>
+		</tr>
+	</table>
+</div><div class="food-area">
+	<table>
+		<caption>飲品</caption>
+		<tr>
+			<td colspan="4" class="item-name">可樂</td>
+			<td colspan="1" class="item-price">$60</td>
+		</tr>
+		<tr>
+			<td colspan="4" class="item-name">特調</td>
+			<td colspan="1" class="item-price">$80</td>
+		</tr>
+	</table>
+</div>

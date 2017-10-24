@@ -1,0 +1,83 @@
+<div class="contentrow">
+<div class="food-area">
+	<table>
+		<caption>套餐</caption>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="1-1">菲力牛排</div>
+				<div class="popdown" id="pop1-1">12345647<br>123</div>
+			</td>
+			<td class="item-price">$499</td>
+		</tr>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="1-2">醬燒雞腿</div>
+				<div class="popdown" id="pop1-2">123</div>
+			</td>
+			<td class="item-price">$299</td>
+		</tr>
+	</table>
+</div>
+<div class="food-area">
+	<table>
+		<caption>單點</caption>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="2-1">菲力牛排</div>
+				<div class="popdown" id="pop2-1">123</div>
+			</td>
+			<td class="item-price">$399</td>
+		</tr>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="2-2">醬燒雞腿</div>
+				<div class="popdown" id="pop2-2">123</div>
+			</td>
+			<td class="item-price">$199</td>
+		</tr>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="2-3">快樂兒童大人</div>
+				<div class="popdown" id="pop2-3">123</div>
+			</td>
+			<td class="item-price">$299</td>
+		</tr>
+	</table>
+</div><div class="food-area">
+	<table>
+		<caption>甜點</caption>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="3-1">乳酪蛋糕</div>
+				<div class="popdown" id="pop3-1">123</div>
+			</td>
+			<td class="item-price">$100</td>
+		</tr>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="3-2">巧克力聖代</div>
+				<div class="popdown" id="pop3-2">123</div>
+			</td>
+			<td class="item-price">$100</td>
+		</tr>
+	</table>
+</div><div class="food-area">
+	<table>
+		<caption>飲品</caption>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="4-1">可樂</div>
+				<div class="popdown" id="pop4-1">123</div>
+			</td>
+			<td class="item-price">$60</td>
+		</tr>
+		<tr>
+			<td class="item-name">
+				<div class="intd" onclick="showdetail(this)" data-item="4-2">特調</div>
+				<div class="popdown" id="pop4-2">123</div>
+			</td>
+			<td class="item-price">$80</td>
+		</tr>
+	</table>
+</div>
+</div>

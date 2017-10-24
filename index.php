@@ -110,12 +110,12 @@
 		</div>
 
 	</div>
-
+	
 	<!-- navigator -->
 	<div class="topnav" id="myTopnav">
 	  <a href="javascript:void(0);" class="navitem">wildmio</a>
-	  <a href="javascript:void(0);" class="navitem">活動訊息</a>
-	  <a href="javascript:void(0);" class="navitem">商品</a>
+	  <a href="javascript:void(0);" class="navitem" id="newsbtn">活動訊息</a>
+	  <a href="javascript:void(0);" class="navitem" id="foodbtn">商品</a>
 	  <a href="javascript:void(0);" class="navitem" id="aboutbtn">關於我們</a>
 	  <a href="javascript:void(0);" class="navitem" id="membtn">會員</a>
 	  <a href="javascript:void(0);" class="icon navitem" onclick="checksize()">&#9776;</a>
@@ -128,17 +128,17 @@
 	<!-- right side bar -->
 	<div id="mySidemenu" class="sidemenu">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-	  <a href="#">About</a>
-	  <a href="#">Services</a>
-	  <a href="#">Clients</a>
-	  <a href="#">Contact</a>
+	  <a href="#">合作夥伴</a>
+	  <a href="#">服務客群</a>
+	  <a href="#">徵才資訊</a>
+	  <a href="#">連繫我們</a>
 	</div>
 	<div class="sidetool">
 		<!-- Use any element to open the sidenav -->
 		<div class="menu">
-			<button>Apple</button>
-		  	<button>Samsung</button>
-		  	<button>Sony</button>
+			<button>功能一</button>
+		  	<button>功能二</button>
+		  	<button>功能三</button>
 		  	<button type="button" onclick="openMenu()"><span>更多</span></button>
 		</div>
 
@@ -159,18 +159,20 @@
 	  		<div id="dragopen">&spades;</div>
 		</div>
 	  	<div id="dragitem">
-		  <p>移動</p>
-		  <p>區塊</p>
-		  <p>試試</p>
+		  <p>新增</p>
+		  <p>刪除</p>
+		  <p>修改</p>
 		</div>
 	</div>
 
 	<!-- main content -->
 	<section class="content" id="content" onresize="show();">
-		
+		<h1>歡迎遊覽此網站</h1>
 	</section>
 
-	<footer class="footer zeromp"></footer>
+	<footer class="footer zeromp">
+		<span class="close">&times;</span>
+	</footer>
 
 	<?php require_once "inc/footer.php";?>
 </body>

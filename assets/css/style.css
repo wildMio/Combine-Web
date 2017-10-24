@@ -99,6 +99,8 @@ form label {
   font-weight: bold;
   font-size: 25px;
   padding: 8px;
+  border: 1px solid #EB3D3D;
+  border-radius: 5px 0 5px 0; 
 }
 
 /* Clear floats after the columns */
@@ -396,6 +398,13 @@ ul li:not(:first-child) {
     font-weight: bold;
     transition: 0.6s;
     color: DarkOliveGreen;
+    cursor: pointer;
+}
+
+#dragitem {
+    outline: 3px solid #333;
+    border: 5px solid #333;
+    border-radius: 6px;
 }
 
 .ro180 {
@@ -423,6 +432,106 @@ ul li:not(:first-child) {
   padding: 0;
 }
 
+.food-area {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 24%;
+  margin: 0 0.5%;
+  height: 100%;
+}
+
+.food-area table {
+  border: 2px solid #8DC8D1;
+  border-radius: 8px;
+  width: 100%;
+  table-layout: fixed;
+  height: 100%;
+}
+
+caption {
+  font-size: 30px;
+  color: #2E41C6;
+  margin: 5px 0;
+  letter-spacing: 5px;
+}
+
+tr {
+  font-size: 20px;
+  line-height: 43px;
+}
+
+.item-name {
+  position: relative;
+  width: 70%;
+  border-right: 1px dashed #D18DA7;
+  border-bottom: 1px solid #ddd;
+}
+
+.intd {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 3px;
+  letter-spacing:2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.intd:hover {
+  position: relative;
+}
+
+.popdown {
+    display: none;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 105%;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 3;
+}
+
+/* Popdown arrow */
+.popdown::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+.item-price {
+  text-align: right;
+  padding-right: 2px;
+  letter-spacing:1px;
+  width: 30%;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.contentrow {
+  margin-bottom: 150px;
+}
+
+.contentrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .content {
   padding: 1%;
   background: white;
@@ -440,6 +549,18 @@ ul li:not(:first-child) {
 
   }
 
+  .food-area {
+      width: 100%;
+  }
+
+  .food-area:not(:first-child) {
+    margin-top: 5px;
+  }
+
+  .popdown {
+    left: 30%;
+  }
+
   .col-25, .col-75, .logbtn {
     width: 100%;
     margin-top: 0;
@@ -447,6 +568,8 @@ ul li:not(:first-child) {
 
   .js-error {
     margin: 8px 0 0 0;
+
+    =
   }
 
   .topnav .navitem{
@@ -465,9 +588,11 @@ ul li:not(:first-child) {
     width: 98%;
   }
   .searchtxt, .icon-bar {
+    opacity: 0.5;
     z-index: 1;
   }
   .searchtxt[type=text]:focus {
+    opacity: 1;
     width: 100%;
   }
 
